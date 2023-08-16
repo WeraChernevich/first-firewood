@@ -1,0 +1,41 @@
+.aside {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    min-height: 600px;
+    background: linear-gradient(to left, rgba(11, 29, 38, 0) 45%, $dark 50%), url(./../img/aside/BG.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.aside__info {
+    padding: 125px 335px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @media screen and (max-width: $tablet) {
+        padding: 126px 112px;
+    }
+}
+
+.aside__title {
+    color: $lgreen;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10);
+    font-family: GT Eesti Pro Display;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    border-bottom: solid 2px $lgreen;
+}
+
+.aside__slogan {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.aside__text {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: normal;
+}

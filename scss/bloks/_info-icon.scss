@@ -1,0 +1,65 @@
+.header__info-btn {
+    --time: 0.1s;
+    --width: 40px;
+    --height: 30px;
+    --line-height: 1px;
+    --line-margin: 2;
+    --color: #fff;
+
+    height: var(--height);
+    width: var(--width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info__icon-btn {
+    position: relative;
+    width: var(--width);
+    height: var(--line-height);
+    background-color: var(--color);
+}
+
+.info__icon-btn::before,
+.info__icon-btn::after {
+    content: '';
+    display: block;
+
+    position: absolute;
+    left: 0;
+
+    width: var(--width);
+    height: var(--line-height);
+
+    background-color: var(--color);
+    transition: transform var(--time) ease-in,
+        top var(--time) linear var(--time);
+}
+
+.info__icon-btn::before {
+    top: calc(var(--line-height) * -8);
+}
+
+.info__icon-btn::after {
+    top: calc(var(--line-height) * 8);
+}
+
+.info__icon-btn.info__icon-btn--active {
+    background-color: transparent;
+}
+
+.info__icon-btn.info__icon-btn--active::before,
+.info__icon-btn.info__icon-btn--active::after {
+    top: 0;
+    transition: top var(--time) linear,
+        transform var(--time) ease-in var(--time);
+}
+
+.info__icon-btn.info__icon-btn--active::before {
+    transform: rotate(45deg);
+}
+
+.info__icon-btn.info__icon-btn--active::after {
+    transform: rotate(-45deg);
+}
+

@@ -1,0 +1,32 @@
+.products {
+    margin-left: 120px;
+    margin-right: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @media screen and (max-width: $tablet) {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+}
+
+.products__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.products__userpic {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+   
+
+}
+
+.products__title {
+   padding-top: 5px;
+}
+
